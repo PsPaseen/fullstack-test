@@ -1,69 +1,36 @@
-# React + TypeScript + Vite
+# สวัสดีครับ ผมนายพศิน แสงอรุณ 
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# วิธีติดตั้งและรันระบบ FullteamTech - Test
 
-Currently, two official plugins are available:
+----------
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 1. ข้อมูลเบื่องต้น
+ ใช้งาน Database เป็น MS SQL Server
+ หลังบ้านใช้งาน Python + Flask + Bcrypt
+ หน้าบ้านใช้งาน React + TypeScript + MUI 
 
-## Expanding the ESLint configuration
+----------
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 2. ติดตั้ง Frontend
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+1. เปิด terminal แล้วเข้าโฟลเดอร์ `fullteamtech-frontend`
+2. ติดตั้ง dependencies โดยพิมพ์ใน terminal ว่า
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+    npm install
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+3. รัน frontend โดยพิมพ์ใน terminal ว่า
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+    npm run dev
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+----------
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## 4. การเข้าใช้งาน
+
+- เปิดเบราว์เซอร์ไปที่ `http://localhost:5173` (หรือ port ที่แสดงใน terminal)
+- Login ด้วย username/password 
+- role Admin id: admin password: admin123456
+- role User id: user password: user123456
+
+----------
+
+
