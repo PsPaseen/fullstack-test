@@ -10,6 +10,7 @@ interface AdminRouteProps {
 export const AdminRoute = (props : AdminRouteProps) => {
     const {children} = props
     const accessToken = localStorage.getItem("accessToken")
+    const role = localStorage.getItem("role")
     const nav = useNavigate()
 
     const checkAdmin = useCallback (async() => {
@@ -53,8 +54,11 @@ export const AdminRoute = (props : AdminRouteProps) => {
         },[accessToken, nav])
 
     useEffect(() => {
+        if(role != 'admin'){
+            nav('/')
+        }
         checkAdmin()
-    }, [checkAdmin])
+    }, [checkAdmin, role, nav])
 
     //ถ้า checkAdmin ผ่านจะ return children
     return children
